@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { themeStore, toggleTheme } from "$lib/store";
 	import "$lib/app.css";
 	import NProgress from "nprogress";
 	import { navigating } from "$app/stores";
@@ -72,9 +73,6 @@
 	}
 </style>
 
-<script>
-    import { themeStore, toggleTheme } from "$lib/store";
-</script>
 
 <div class:dark={($themeStore === 'dark')}>
     <Navbar />
