@@ -71,3 +71,19 @@
 		flex: 1;
 	}
 </style>
+
+<script>
+    import { themeStore, toggleTheme } from "$lib/store";
+</script>
+
+<div class:dark={($themeStore === 'dark')}>
+    <Navbar />
+
+    <main>
+        <slot />
+    </main>
+
+    <Footer />
+</div>
+
+<button on:click={toggleTheme}>Toggle Theme</button>

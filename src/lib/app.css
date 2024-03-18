@@ -27,3 +27,33 @@
 		@apply text-sky-500 hover:underline hover:text-sky-600;
 	}
 }
+
+/* src\lib\app.css */
+:root {
+	/* Светлая тема по умолчанию */
+	--background-color: #ffffff;
+	--text-color: #333333;
+	--link-color: #0066ff;
+	--link-hover-color: #0056e0;
+  }
+  
+  .dark {
+	/* Переменные темной темы */
+	--background-color: #121212;
+	--text-color: #cccccc;
+	--link-color: #0099ff;
+	--link-hover-color: #0089e0;
+  }
+  
+  body {
+	background-color: var(--background-color);
+	color: var(--text-color);
+  }
+  
+  .link {
+	color: var(--link-color);
+  }
+  
+  .link:hover {
+	color: var(--link-hover-color);
+  }
