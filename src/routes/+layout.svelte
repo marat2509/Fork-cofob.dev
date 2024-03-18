@@ -51,14 +51,14 @@
 	<link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
 </svelte:head>
 
-<div>
-	<Navbar />
+<div class:dark={($themeStore === 'dark')}>
+    <Navbar />
 
-	<main>
-		<slot />
-	</main>
+    <main>
+        <slot />
+    </main>
 
-	<Footer />
+    <Footer />
 </div>
 
 {@html import.meta.env.VITE_ANALYTICS}
@@ -72,16 +72,5 @@
 		flex: 1;
 	}
 </style>
-
-
-<div class:dark={($themeStore === 'dark')}>
-    <Navbar />
-
-    <main>
-        <slot />
-    </main>
-
-    <Footer />
-</div>
 
 <button on:click={toggleTheme}>Toggle Theme</button>
